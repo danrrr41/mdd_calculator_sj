@@ -9,13 +9,22 @@ app = FastAPI()
 
 SITE_PASSWORD = "0603"
 
-# 프로젝트 루트 경로 계산
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# Vercel 환경에서 파일 경로를 가장 확실하게 찾는 방식
+# api/main.py 위치 기준으로 상위 폴더의 public/index.html을 지칭합니다.
+CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
+BASE_DIR = os.path.dirname(CURRENT_DIR)
 
-# 홈페이지 접속 로직 (app.mount 대신 사용)
+
 @app.get("/")
 async def read_index():
-    return FileResponse(os.path.join(BASE_DIR, 'public', 'index.html'))
+    index_path = os.path.join(BASE_DIR, 'public', 'index.html')
+
+    # 파일이 없는 경우를 대비한 방어 코드
+    if not os.path.exists(index_path):
+        return JSONResponse(status_code=404, content={"message": f"HTML 파일을 찾을 수 없습니다. 경로: {index_path}"})
+
+    return FileResponse(index_path)
+
 
 @app.get("/api/calculate")
 async def calculate(
@@ -29,6 +38,7 @@ async def calculate(
         return JSONResponse(status_code=401, content={"message": "비밀번호가 올바르지 않습니다."})
 
     try:
+        # yfinance 호출 시 에러 방지를 위해 progress=False 유지
         df = yf.download(code, start=start, end=end, progress=False)
         if df.empty:
             return JSONResponse(status_code=400, content={"message": "데이터 없음"})
@@ -74,4 +84,5 @@ async def calculate(
             }
         }
     except Exception as e:
+        # 에러 발생 시 어떤 에러인지 프런트로 전달
         return JSONResponse(status_code=500, content={"message": str(e)})

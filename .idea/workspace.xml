@@ -7,6 +7,7 @@
     <list default="true" id="23c946f2-83c7-4565-b9c6-6ad2ed86a5e7" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +64,7 @@
       <workItem from="1776987847455" duration="35000" />
       <workItem from="1776988230169" duration="474000" />
       <workItem from="1776988932817" duration="6939000" />
-      <workItem from="1776998808555" duration="956000" />
+      <workItem from="1776998808555" duration="1181000" />
     </task>
     <servers />
   </component>

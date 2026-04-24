@@ -4,14 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23c946f2-83c7-4565-b9c6-6ad2ed86a5e7" name="변경" comment="" />
+    <list default="true" id="23c946f2-83c7-4565-b9c6-6ad2ed86a5e7" name="변경" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/Old_Project_Python/pycdc" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
@@ -60,7 +63,7 @@
       <workItem from="1776987847455" duration="35000" />
       <workItem from="1776988230169" duration="474000" />
       <workItem from="1776988932817" duration="6939000" />
-      <workItem from="1776998808555" duration="257000" />
+      <workItem from="1776998808555" duration="346000" />
     </task>
     <servers />
   </component>
